@@ -1,0 +1,12 @@
+a = input().split()
+x = float(a[0])
+y = float(a[2])
+# print(x, y)
+if a[1] == '-': print(x-y)
+if a[1] == '+': print(x+y)
+if a[1] == '*': print(x*y)
+if y != 0:
+    if a[1] == '/': print(x/y)
+    elif a[1] == '//': print(x//y)
+    elif a[1] == '%': print(x%y)
+else: print('На ноль делить нельзя')
