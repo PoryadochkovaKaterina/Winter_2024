@@ -1,9 +1,6 @@
-a1 = (input().lower().split(', '))
-a2 = (input().lower().split(', '))
+a1 = set(input().lower().split(', '))
+a2 = set(input().lower().split(', '))
 
-p1 = set(a1)
-p2 = set(a2)
-
-z = p2.intersection(p1)
+z = a1.intersection(a2)
 print(len(z))
 
