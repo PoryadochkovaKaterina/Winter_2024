@@ -9,5 +9,5 @@ for i in n:
     if i in string.digits:
         d.append(i)
 print(' '.join(set(w)))
-print(' '.join(set(p)))
 print(' '.join(set(d)))
+print(' '.join(set(p)))
