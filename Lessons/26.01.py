@@ -233,9 +233,9 @@ import math
 # print(ab.difference(tes))   # Разница между множествами
 
 # вычисление количества уникальных символов во всех словах
-n = input().split()
-res = set()
-for i in n:
-    res = res.union(set(list(i)))
-    print(res)
-print(len(res))
+# n = input().split()
+# res = set()
+# for i in n:
+#     res = res.union(set(list(i)))
+#     print(res)
+# print(len(res))
