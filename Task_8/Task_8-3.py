@@ -1,4 +1,3 @@
-text = ['abab', 'xx', 'aaaaaaaa', 'abcbab']
-text = sorted(text, key=lambda x: len(list(set(x))))
-text.reverse()
+text = ['abab', 'xx', 'aaaaaaaa', 'yy', 'abcbab', 'baba']
+text = sorted(text, key=lambda x: (-len(set(x)), x))
 print(str(text))
