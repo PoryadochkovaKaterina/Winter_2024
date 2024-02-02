@@ -1,7 +1,4 @@
-def len_fun(val):
-    return len(list(set(val)))
-
 text = ['abab', 'xx', 'aaaaaaaa', 'abcbab']
-text = sorted(text, key=len_fun)
+text = sorted(text, key=lambda x: len(list(set(x))))
 text.reverse()
 print(str(text))
