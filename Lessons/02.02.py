@@ -177,18 +177,18 @@
 # После того как сделали всю необходимую работу - его следует закрыть
 
 # Открытие - Закрытие файла
-# f = open('Fale/text.txt', encoding='utf-8')
+# f = open('File/text.txt', encoding='utf-8')
 # f.close()
 
 # Запись в файл. Обязательный атрибут 'w'
-# f = open('Fale/text.txt', 'w', encoding='utf-8')
+# f = open('File/text.txt', 'w', encoding='utf-8')
 # for i in range(5):
 #     s = input()
 #     print(s, file = f)
 # f.close()
 
 # Чтение данных из файла
-# f = open('Fale/text.txt', encoding='utf-8')
+# f = open('File/text.txt', encoding='utf-8')
 # s = f.readlines()
 # for i in s:
 #     print(i.strip())
