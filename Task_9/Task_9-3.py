@@ -1,5 +1,4 @@
 dic = {}
-dic_res = dict()
 def chast(text):
     dic_res = []
     for i in text:
