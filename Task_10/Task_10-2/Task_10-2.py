@@ -28,7 +28,7 @@ for s in range(1, ws.max_row+1):
     su = sum(list(map(int, lst)))
 # print(su)
 
-li = sorted(ws.values, key=lambda row: [row[1]], reverse=True)
+li = sorted(ws.values, key=lambda col: [col[1], col], reverse=True)
 
 wb.active = wb['New']
 ws_S = wb.active
