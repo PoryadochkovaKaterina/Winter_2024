@@ -7,7 +7,7 @@ for i in s:
     r.append(i.split())
     #print(r)
 
-for j in r:
+for j in r[::-1]:
     j.reverse()
     result = " ".join(j)
     #print(result)
