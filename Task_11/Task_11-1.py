@@ -14,10 +14,3 @@ for mon in range(1, 13):
                 res.append(dat.strftime('%d.%m.%y'))
                 c = 0
 print(*res, sep='\n')
-        # if i == 0 and j[3] != 0:
-        #     dat = date(2024, m, j[3]+14)
-        #     print(dat.strftime('%d.%m.%y'), j)
-        # elif i == 3 :
-        #     dat = date(2024, m, j[3])
-        #     print(dat.strftime('%d.%m.%y'), j)
-
