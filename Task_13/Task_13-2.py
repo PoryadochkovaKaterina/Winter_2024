@@ -7,7 +7,7 @@ def pos(n):
                 if st == st[::-1]:
                     yield i
                     cou = i
-            else: break
+            else: return
 
 df = pos(int(input()))
 for k in df:

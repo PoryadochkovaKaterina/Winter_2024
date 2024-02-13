@@ -9,7 +9,7 @@ def pos(n):
                 else:
                     yield -i
                     cou += 1
-            else: break
+            else: return
 
 df = pos(int(input()))
 for k in df:
