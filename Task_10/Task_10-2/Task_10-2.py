@@ -26,7 +26,6 @@ lst = []
 for s in range(1, ws.max_row+1):
     lst.append(ws.cell(row=s, column=2).value)
     su = sum(list(map(int, lst)))
-# print(su)
 
 li = sorted(ws.values, key=lambda col: [col[1], col], reverse=True)
 
