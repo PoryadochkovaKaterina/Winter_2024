@@ -20,7 +20,9 @@ def rek(dic):
         # print(i, v)
         if type(v) is dict:
             yield (i, v)
-            yield from rek(v)
+            # yield from rek(v)
+            for vlo in rek(v):
+                yield vlo
         else:
             yield (i, v)
 
