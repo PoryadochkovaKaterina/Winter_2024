@@ -5,3 +5,5 @@ text = input().upper()
 reg = r'\b\w'
 res = re.findall(reg, text)
 print(''.join(res))
+
+
