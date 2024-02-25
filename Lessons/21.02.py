@@ -79,8 +79,8 @@
 #         if type(kwargs[x]) == int:
 #             res += kwargs[x]
 #     return res
-# print(fu(1, 2, 'abc', a = 3, b = 'def'))
-# print(fu('1', '2', '3', x = '4', y = 5))
+# print(fu(1, 2, 'abc', a = 3, b = 'def', '5', '9', 't' = 5, '5' = 'tyr', 6 = 6))
+# print(fu('1', 2, '3', x = '4', y = 5, b = 'def'))
 
 # def dec(fun):
 #     def wra(*args, **kwargs):
@@ -261,7 +261,7 @@ print(a.hungry(), b.hungry(), c.hungry())
 a.feed(5)
 print(a.hungry(), b.hungry(), c.hungry())
 a.feed(4)
-c.feed()
+c.feed(3)
 print(a.hungry(), b.hungry(), c.hungry())
 print(a.hungry(), b.hungry(), c.hungry())
 
