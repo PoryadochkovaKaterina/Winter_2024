@@ -1,18 +1,26 @@
 class Inf:
     def __init__(self):
         self.A = ord('A')
-        # self.ordA = ord('A')
-    def __iter__(self):
-        return self
+        self.res = []
+        self.inf = []
+
     def __next__(self):
-        res = ''
         for i in range(26):
-            self.let = chr(self.A+i)
-            num = i+1
-            res += f'{str(num)}, {self.let}, '
-            # res += self.let
-        return res
+            self.let = chr(self.A + i)
+            num = i + 1
+            self.res.append(num)
+            self.res.append(self.let)
+        return self.res
+
+    def info(self, n):
+        for i in range(n):
+            self.inf.append(self.res[i])
+        return self.inf
+
 
 inf = Inf()
-for _ in range(int(input('Введете число повторений: '))):
-    print(next(inf), end=' ')
+n = int(input())
+numb = n // 54
+for i in range(numb + 1):
+    next(inf)
+print(*inf.info(n))
