@@ -5,7 +5,8 @@ def sum_Data(lst):
     for i in df.index:
         for j in df.columns:
             # print(type(df.loc[i, j]), df.loc[i, j])
-            if not df.loc[i, j].isalpha():
+            # if (not df.loc[i, j].isalpha()) or (df.loc[i, j].isdigit()):
+            if df.loc[i, j].isdigit():
                 res.append(float(df.loc[i, j]))
     return sum(res)
 print(sum_Data(input().split()))
