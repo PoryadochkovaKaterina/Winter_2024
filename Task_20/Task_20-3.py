@@ -4,6 +4,9 @@ class Inf:
         self.res = []
         self.inf = []
 
+    def __iter__(self):
+        return self
+
     def __next__(self):
         for i in range(26):
             self.let = chr(self.A + i)
