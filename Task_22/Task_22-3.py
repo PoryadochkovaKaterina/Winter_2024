@@ -1,4 +1,7 @@
 import keyword
+import re
+import string
+
 lis = keyword.kwlist
 print(lis)
 res = []
@@ -16,9 +19,17 @@ for i in lis:
     if i in text.lower() or i in text.title():
         res.append(i)
 for j in text.split():
+    # print(j)
     if j.lower() in lis or j.title() in lis:
         j = '<kw>'
         res_t.append(j)
+    elif re.findall(r"\b\w+[,.!?']", j):
+        w = ''.join(re.findall(r"\b\w+\b", j))
+        if w.lower() in lis or w.title() in lis:
+            j = '<kw>,'
+            res_t.append(j)
+        else:
+            res_t.append(j)
     else:
         res_t.append(j)
 print(*res_t)
