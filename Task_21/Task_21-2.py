@@ -33,13 +33,6 @@ while x > 0 or y > 0:
 print(res[::-1])
 
 
-
-
-
-
-
-
-
 # col = int(input('Задайте количество столбцов: '))
 # row = int(input('Задайте количество строк: '))
 # mat = np.random.randint(0, 20, (row, col))
