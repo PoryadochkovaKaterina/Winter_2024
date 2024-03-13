@@ -60,7 +60,7 @@
 # con = psycopg2.connect(
 #     database='postgres',
 #     user='postgres',
-#     password='12345',
+#     password='*****',
 #     host='127.0.0.1',
 #     port='5432'
 # )
