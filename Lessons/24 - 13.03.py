@@ -96,7 +96,7 @@
 # Вывод на экран данных из БД в PyCharm
 import sqlite3
 # Устанавливаем соединение с базой данных
-con = sqlite3.connect('my_database.db')
+con = sqlite3.connect('File/my_database.db')
 cursor = con.cursor()
 # Выбираем пользователей
 cursor.execute('''SELECT * FROM Users''')
