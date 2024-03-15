@@ -15,3 +15,7 @@ for i in range(0, len(lis_1)):
         if lis_1[i] >= lis_1[j]:   # <= для убывания
             lis_1[i], lis_1[j] = lis_1[j], lis_1[i]
 print(*lis_1)
+
+# В  обратном порядке
+text = 'abracadabra19'
+print(text[::-1])
