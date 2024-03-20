@@ -15,3 +15,11 @@ def compare(text1, text2, cou = 0):
     else: print('False')
 
 compare(input(), input())
+
+# def compare(s, t):
+#     if abs(len(s) - len(t)) > 1: return False
+#     for i in range(min(len(s), len(t))):
+#         if s[i] != t[i]:
+#             return s[i:] == t[i+1:] or s[i+1:] == t[i:]
+#         else: return True
+# print(compare(input(), input()))
