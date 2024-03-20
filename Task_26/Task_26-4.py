@@ -4,7 +4,8 @@ from PyQt6.QtGui import QIcon, QAction, QPixmap
 from PyQt6.QtWidgets import (
         QApplication, QMainWindow, QTextEdit,
         QToolBar, QLabel, QStatusBar,
-        QVBoxLayout, QWidget, QPushButton)
+        QVBoxLayout, QWidget, QPushButton,
+        QMessageBox)
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 
 class Example(QMainWindow):
@@ -66,7 +67,8 @@ class Example(QMainWindow):
 
         self.aboutAction = QAction('&About', self)
         self.aboutAction.setStatusTip('About aplication')
-        self.aboutAction.triggered.connect(self.aboutFile)
+        # self.aboutAction.triggered.connect(self.aboutFile)
+        self.aboutAction.triggered.connect(self.clickFind)
 
         menubar = self.menuBar()
         fileMenu = menubar.addMenu('&File')
@@ -133,9 +135,11 @@ class Example(QMainWindow):
         self.window.setLayout(self.layout)
         self.window.show()
         self.centralWidget.setText('<b> File > Help </b> clicked')
-    def aboutFile(self):
-        self.centralWidget.setText('Мини приложение \n Создано 20 марта 2024г.')
-
+    # def aboutFile(self):
+    #     self.centralWidget.setText('Мини приложение \n Создано 20 марта 2024г.')
+    def clickFind(self):
+        QMessageBox.about(self, 'About', 'Мини приложение \nСоздано 20 марта 2024г.')
+        self.centralWidget.setText('<b> File > About </b> clicked')
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
