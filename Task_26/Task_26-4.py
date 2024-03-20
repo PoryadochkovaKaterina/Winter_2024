@@ -118,18 +118,16 @@ class Example(QMainWindow):
     def manualFile(self):
         self.centralWidget.setText('https://pythonist.ru/')
     def helpFile(self):
-
-        window = QWidget()
-        layout = QVBoxLayout()
-        view = QWebEngineView()
-        layout.addWidget(view)
-        view.setUrl(QUrl('https://www.pythontutorial.net/pyqt/'))
-        window.setLayout(layout)
-        window.show()
+        self.window = QWidget()
+        self.layout = QVBoxLayout()
+        self.view = QWebEngineView()
+        self.layout.addWidget(self.view)
+        self.view.setUrl(QUrl('https://www.pythontutorial.net/pyqt/'))
+        self.window.setLayout(self.layout)
+        self.window.show()
         self.centralWidget.setText('<b> File > Help </b> clicked')
     def aboutFile(self):
         self.centralWidget.setText('Мини приложение \n Создано 20 марта 2024г.')
-
 
 
 if __name__ == '__main__':
