@@ -116,7 +116,14 @@ class Example(QMainWindow):
     def cutFile(self):
         self.centralWidget.setText('<b> File > Cut </b> clicked')
     def manualFile(self):
-        self.centralWidget.setText('https://pythonist.ru/')
+        self.window = QWidget()
+        self.layout = QVBoxLayout()
+        self.view = QWebEngineView()
+        self.layout.addWidget(self.view)
+        self.view.setUrl(QUrl('https://pythonist.ru/'))
+        self.window.setLayout(self.layout)
+        self.window.show()
+        self.centralWidget.setText('<b> File > Manual </b> clicked')
     def helpFile(self):
         self.window = QWidget()
         self.layout = QVBoxLayout()
