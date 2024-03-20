@@ -130,14 +130,7 @@ class Example(QMainWindow):
     def aboutFile(self):
         self.centralWidget.setText('Мини приложение \n Создано 20 марта 2024г.')
 
-class HelpWindow(QWidget):
-    def __init__(self):
-        super().__init__()
-        layout = QVBoxLayout()
-        self.label = QLabel("Another Window % d")
-        self.resize(300, 200)
-        layout.addWidget(self.label)
-        self.setLayout(layout)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
