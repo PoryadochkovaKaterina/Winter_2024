@@ -21,3 +21,13 @@ for i in rek(dic):
     print(i)
 print(f'Количество элементов списка равно: {cou}')
 
+# def hmi(lst):
+#     res = 0
+#     for k, v in enumerate(lst):
+#         if type(v) == list:
+#             res += hmi(v) + 1
+#         else:
+#             res += 1
+#     return res
+# print(hmi(['x', 'y', ['z']]))
+
