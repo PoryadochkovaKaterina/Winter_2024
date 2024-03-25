@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title> Books </title>
+</head>
+<body>
+<H1> Books </H1>
+<u1>
+    {% for m in list %}
+    <ul>
+        <li>
+            {{m.book_id}} &#166
+            {{m.title}} &#166
+            {{m.price}} &#166
+            {{m.amount}}
+        </li>
+    </ul>
+    {% endfor %}
+</u1>
+</body>
+</html>

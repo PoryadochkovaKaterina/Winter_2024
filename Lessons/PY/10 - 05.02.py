@@ -262,7 +262,7 @@
 
 # Максимальная сторока и колонка
 import openpyxl
-wb = openpyxl.load_workbook('File/test.xlsx')
+wb = openpyxl.load_workbook('../File/test.xlsx')
 ws = wb.active
 ws['A1'].value = 213
 ws['B2'].value = 'ЯчейкаB2'
