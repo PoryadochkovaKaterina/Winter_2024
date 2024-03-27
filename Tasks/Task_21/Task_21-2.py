@@ -77,3 +77,84 @@ print(res[::-1])
 #     return res, sum(res)
 # print(*opt())
 
+# from itertools import permutations
+# import numpy as np
+# DOWN = 'D'
+# RIGHT = 'R'
+# def random_int_matrix(size: int) -> np.array:
+#     """Generates a size x size matrix with random integers from 0 to 9"""
+#     mat = np.random.random((size, size)) * 10
+#     return mat.astype(int)
+# def find_all_paths(size: int):
+#     """Creates all possible pathes going down and right"""
+#     return [gen_path(perm) for perm in permutations([DOWN] * (size-1) + [RIGHT] * (size-1))]
+# def gen_path(permutation: str) -> list:
+#     track = [(0, 0)]
+#     for entry in permutation:
+#         if entry == DOWN:
+#             track.append((track[-1][0] + 1, track[-1][1]))
+#         else:
+#             track.append((track[-1][0], track[-1][1] + 1))
+#     return track
+#
+# def sum_track_values(mat: np.array, track: list) -> list:
+#     """Computes the value sum for the given path"""
+#     return sum([mat[e[0], e[1]] for e in track])
+#
+# MATRIX_SIZE = 4
+# matrix = random_int_matrix(MATRIX_SIZE)
+# print('Randomly generated matrix:\n', matrix)
+# paths = find_all_paths(MATRIX_SIZE)
+# costs = np.array([sum_track_values(matrix, p) for p in paths])
+# min_idx = costs.argmin()
+# print('Best path:', paths[min_idx])
+# print('Costs:', costs[min_idx])
+
+# def find(mat, start, end, path=None):
+#     if path is None:
+#         path = []
+#
+#         x_end, y_end = end
+#         if mat[x_end][y_end] == 1:
+#             return None
+#     path = path + [start]
+#
+#     if start == end:
+#         return path
+#
+#     x, y = start
+#     if x < 0 or x >= len(mat) or y < 0 or y >= len(mat[0]) or mat[x][y] == 1:
+#         return None
+#
+#     down_path = find(mat, (x + 1, y), end, path)
+#     right_path = find(mat, (x, y + 1), end, path)
+#     left_path = find(mat, (x - 1, y), end, path)
+#     up_path = find(mat, (x, y - 1), end, path)
+#
+#     if down_path is None and right_path is None:
+#         return None
+#     if down_path is None:
+#         return right_path
+#     if right_path is None:
+#         return down_path
+#
+#     if len(down_path) < len(right_path):
+#         return down_path
+#     else:
+#         return right_path
+#
+#
+# mat = [[7, 1, 1, 1],
+#        [4, 5, 2, 1],
+#        [6, 8, 1, 1],
+#        [3, 4, 6, 3]]
+# start = (0, 0)
+# end = (3, 3)
+#
+# short = find(mat, start, end)
+# if short:
+#     print(mat)
+#     print(short)
+#     print(len(short))
+# else:
+#     print('Невозможно')
