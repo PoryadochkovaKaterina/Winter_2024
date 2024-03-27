@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book1</title>
+</head>
+<body>
+<H1>Book1</H1>
+<u1>
+    {% for m in list %}
+    <ul>
+        <li>
+            {{m.Book.book_id}} &#166
+            {{m.Author.author_id}} &#166
+            {{m.Author.author_name}} &#166
+            {{m.Book.title}} &#166
+            {{m.Book.price}}
+        </li>
+    </ul>
+    {% endfor %}
+</u1>
+</body>
+</html>

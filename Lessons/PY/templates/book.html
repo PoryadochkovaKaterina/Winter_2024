@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+<!--    <meta charset="UTF-8">-->
     <title> Books </title>
 </head>
 <body>
@@ -7,12 +8,12 @@
 <u1>
     {% for m in list %}
     <ul>
-        <li>
-            {{m.book_id}} &#166
-            {{m.title}} &#166
-            {{m.price}} &#166
-            {{m.amount}}
-        </li>
+       <li>
+           {{m.book_id}}
+           {{m.title}}
+           {{m.price}}
+           {{m.amount}}
+       </li>
     </ul>
     {% endfor %}
 </u1>
