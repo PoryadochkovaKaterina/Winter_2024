@@ -1,11 +1,9 @@
 # # -*- coding: utf-8 -*-
 from flask import Flask, render_template
-from sqlalchemy.orm import Session, sessionmaker
-from sqlalchemy import (create_engine, MetaData, Table,
-                        Integer, String, Column,
-                        DateTime, ForeignKey, Numeric,
-                        SmallInteger)
-from sqlalchemy.orm import relationship, declarative_base
+from sqlalchemy.orm import Session
+from sqlalchemy import (create_engine,
+                        Integer, String, Column)
+from sqlalchemy.orm import declarative_base
 
 engine = create_engine('postgresql+psycopg2://postgres:12345@localhost/postgres')
 session = Session(bind=engine)

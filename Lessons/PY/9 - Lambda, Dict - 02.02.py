@@ -195,7 +195,7 @@
 # f.close()
 
 # Чтение файлом самого себя (смотреть на название файла)
-f = open('9 - 02.02.py', encoding='utf-8')
+f = open('9 - Lambda, Dict - 02.02.py', encoding='utf-8')
 for i in f:
     if i[0] != '#' or i[0] == ' ' or i[0] == '\n':
         print(i.strip())
